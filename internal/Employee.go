@@ -4,7 +4,7 @@ var Employees []Employee
 
 type Employee struct {
 	Name string
-	Age int16
+	Age int
 	Position string
 	Salary float64
 }
