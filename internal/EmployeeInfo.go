@@ -11,7 +11,7 @@ func Info(name string) {
 	for _, emp := range Employees {
 		//Сравнение без учета регистра
 		if strings.EqualFold(emp.Name, name) {
-			fmt.Printf("Имя: %s | Возраст: %d | Должность: %s | Зарплата: %.2f\n", emp.Name, emp.Age, emp.Position, emp.Salary)
+			fmt.Printf("Имя: %s\nВозраст: %d\nДолжность: %s\nЗарплата: %.2f\n", emp.Name, emp.Age, emp.Position, emp.Salary)
 			flag = true
 			break
 		}
