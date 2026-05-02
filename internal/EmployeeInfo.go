@@ -3,9 +3,10 @@ package internal
 import (
 	"strings"
 	"fmt"
+	"errors"
 )
 
-func Info(name string) {
+func Info(name string) (error) {
 	var flag bool
 
 	for _, emp := range Employees {
@@ -18,6 +19,8 @@ func Info(name string) {
 	}
 
 	if !flag {
-		fmt.Println("Сотрудник c таким именем не найден")
+		//fmt.Println("Сотрудник c таким именем не найден")
+		return errors.New("Сотрудник c таким именем не найден!\n")
 	}
+	return nil
 }
